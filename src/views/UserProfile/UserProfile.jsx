@@ -1,23 +1,16 @@
 import React from "react";
 import { Grid, InputLabel } from "material-ui";
 
-import {
-  RegularCard,
-  Button,
-  CustomInput,
-  ItemGrid
-} from "components";
-
-
+import { RegularCard, Button, CustomInput, ItemGrid } from "components";
 
 function UserProfile({ ...props }) {
   return (
     <div>
       <Grid container>
-        <ItemGrid xs={12} sm={12} md={12}>
+        <ItemGrid xs={8} sm={8} md={8}>
           <RegularCard
-            cardTitle="Edit Profile"
-            cardSubtitle="Complete your profile"
+            cardTitle="Enregistrer une agence"
+            cardSubtitle="Ajoute une agence dans le système"
             content={
               <div>
                 <Grid container>
@@ -35,8 +28,8 @@ function UserProfile({ ...props }) {
                   </ItemGrid> */}
                   <ItemGrid xs={12} sm={12} md={12}>
                     <CustomInput
-                      labelText="Username"
-                      id="username"
+                      labelText="Libellé de l'agence"
+                      id="libelleAgence"
                       formControlProps={{
                         fullWidth: true
                       }}
@@ -44,8 +37,8 @@ function UserProfile({ ...props }) {
                   </ItemGrid>
                   <ItemGrid xs={12} sm={12} md={12}>
                     <CustomInput
-                      labelText="Email address"
-                      id="email-address"
+                      labelText="CodeAgence"
+                      id="codeAgence"
                       formControlProps={{
                         fullWidth: true
                       }}
@@ -55,8 +48,8 @@ function UserProfile({ ...props }) {
                 <Grid container>
                   <ItemGrid xs={12} sm={12} md={12}>
                     <CustomInput
-                      labelText="First Name"
-                      id="first-name"
+                      labelText="Ville"
+                      id="villeAgence"
                       formControlProps={{
                         fullWidth: true
                       }}
@@ -64,8 +57,8 @@ function UserProfile({ ...props }) {
                   </ItemGrid>
                   <ItemGrid xs={12} sm={12} md={12}>
                     <CustomInput
-                      labelText="Last Name"
-                      id="last-name"
+                      labelText="Zone"
+                      id="zoneAgence"
                       formControlProps={{
                         fullWidth: true
                       }}
@@ -82,7 +75,7 @@ function UserProfile({ ...props }) {
                       }}
                     />
                   </ItemGrid>
-                  <ItemGrid xs={12} sm={12} md={4}>
+                  <ItemGrid xs={12} sm={12} md={12}>
                     <CustomInput
                       labelText="Country"
                       id="country"
@@ -91,7 +84,7 @@ function UserProfile({ ...props }) {
                       }}
                     />
                   </ItemGrid>
-                  <ItemGrid xs={12} sm={12} md={4}>
+                  <ItemGrid xs={12} sm={12} md={12}>
                     <CustomInput
                       labelText="Postal Code"
                       id="postal-code"
@@ -103,7 +96,7 @@ function UserProfile({ ...props }) {
                 </Grid>
               </div>
             }
-            footer={<Button color="primary">Update Profile</Button>}
+            footer={<Button color="orangered">Enregistrer</Button>}
           />
         </ItemGrid>
       </Grid>

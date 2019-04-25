@@ -3,10 +3,10 @@
 // #############################
 
 import {
-  primaryColor,
   dangerColor,
   successColor,
-  defaultFont
+  defaultFont,
+  orangered
 } from "variables/styles";
 
 const customInputStyle = {
@@ -23,7 +23,7 @@ const customInputStyle = {
   },
   inkbar: {
     "&:after": {
-      backgroundColor: primaryColor
+      backgroundColor: orangered
     }
   },
   inkbarError: {

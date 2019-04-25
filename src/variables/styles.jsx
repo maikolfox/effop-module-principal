@@ -101,7 +101,7 @@ const blueCardHeader = {
 };
 //THIS IS THE ORANGE HEADER BBG//
 const purpleCardHeader = {
-  background: "linear-gradient(90deg, #d35113, #d54500 )",
+  background: "linear-gradient(90deg, #d54500, #d35113)",
   ...primaryBoxShadow
 };
 //THIS IS THE ORANGE HEADER BBG//
