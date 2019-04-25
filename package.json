@@ -5,6 +5,7 @@
   "private": false,
   "main": "index.js",
   "dependencies": {
+    "bootstrap": "4.3.1",
     "chartist": "^0.10.1",
     "classnames": "^2.2.5",
     "firebase": "4.12.1",
