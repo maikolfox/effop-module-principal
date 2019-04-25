@@ -99,10 +99,12 @@ const blueCardHeader = {
   background: "linear-gradient(60deg, #26c6da, #00acc1)",
   ...infoBoxShadow
 };
+//THIS IS THE ORANGE HEADER BBG//
 const purpleCardHeader = {
-  background: "linear-gradient(60deg, #ab47bc, #8e24aa)",
+  background: "linear-gradient(90deg, #d35113, #d54500 )",
   ...primaryBoxShadow
 };
+//THIS IS THE ORANGE HEADER BBG//
 
 const cardActions = {
   margin: "0 20px 10px",

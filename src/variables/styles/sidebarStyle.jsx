@@ -144,14 +144,14 @@ const sidebarStyle = theme => ({
     width: "24px",
     height: "30px",
     float: "left",
-    marginRight: "15px",
+    marginRight: "7px",
     textAlign: "center",
     verticalAlign: "middle",
     color: "rgba(255, 255, 255, 0.8)"
   },
   itemText: {
     ...defaultFont,
-    margin: "0",
+    margin: "-3px",
     lineHeight: "30px",
     fontSize: "14px",
     color: "#FFFFFF"
@@ -206,6 +206,7 @@ const sidebarStyle = theme => ({
         "0 12px 20px -10px rgbargb(213, 69,.28), 0 4px 20px 0 rgba(0,0,0,.12), 0 7px 8px -5px rgb(213, 69,.2)"
     }
   },
+  //BRIDGE BANK ORANGE
   red: {
     backgroundColor: dangerColor,
     boxShadow:
