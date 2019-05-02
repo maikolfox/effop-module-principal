@@ -39,21 +39,21 @@ const appRoutes = [
   },
   {
     path: "/chrg-poids-tache-emp",
-    sidebarName: "Typography",
+    sidebarName: "Charge et poids tache par employer",
     navbarName: "Typography",
     icon: LibraryBooks,
     component: Typography
   },
   {
     path: "/chrg-poids-proc",
-    sidebarName: "Icons",
-    navbarName: "Icons",
+    sidebarName: "Charge et poids par processus",
+    navbarName: "CHARGE ET POIDS PAR PROCESSUS",
     icon: BubbleChart,
     component: Icons
   },
   {
     path: "/chrg-poids-tachproc",
-    sidebarName: "CHARGE POIDS TACHE PROCESSUS",
+    sidebarName: "Charge et poids tâche par processus",
     navbarName: "CHARGE POIDS TACHE PROCESSUS",
     icon: LocationOn,
     component: Maps
@@ -62,7 +62,7 @@ const appRoutes = [
   {
     redirect: true,
     path: "/",
-    to: "/chrg-poids-tachproc",
+    to: "/taux-act-mens",
     navbarName: "Redirect"
   }
 ];

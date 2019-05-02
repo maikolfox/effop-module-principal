@@ -39,7 +39,8 @@ RegularButton.propTypes = {
     "rose",
     "white",
     "simple",
-    "transparent"
+    "transparent",
+    "orangered"
   ]),
   round: PropTypes.bool,
   fullWidth: PropTypes.bool,

@@ -14,18 +14,6 @@ function UserProfile({ ...props }) {
             content={
               <div>
                 <Grid container>
-                  {/* <ItemGrid xs={12} sm={12} md={12}>
-                    <CustomInput
-                      labelText="Company (disabled)"
-                      id="company-disabled"
-                      formControlProps={{
-                        fullWidth: true
-                      }}
-                      inputProps={{
-                        disabled: true
-                      }}
-                    />
-                  </ItemGrid> */}
                   <ItemGrid xs={7} sm={7} md={7}>
                     <CustomInput
                       labelText="Username"
@@ -53,8 +41,10 @@ function UserProfile({ ...props }) {
                       formControlProps={{
                         fullWidth: true
                       }}
+                      value="test"
                     />
                   </ItemGrid>
+
                   <ItemGrid xs={7} sm={7} md={7}>
                     <CustomInput
                       labelText="Last Name"
@@ -70,6 +60,7 @@ function UserProfile({ ...props }) {
                     <CustomInput
                       labelText="City"
                       id="city"
+                      inputProps="cedrick"
                       formControlProps={{
                         fullWidth: true
                       }}
@@ -96,7 +87,11 @@ function UserProfile({ ...props }) {
                 </Grid>
               </div>
             }
-            footer={<Button color="orangered">Update Profile</Button>}
+            footer={
+              <Button color="orangered" onClick={console.log("f")}>
+                Update Profile
+              </Button>
+            }
           />
         </ItemGrid>
       </Grid>

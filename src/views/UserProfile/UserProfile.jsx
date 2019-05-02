@@ -96,7 +96,8 @@ function UserProfile({ ...props }) {
                 </Grid>
               </div>
             }
-            footer={<Button color="orangered">Enregistrer</Button>}
+            footer={<Button type="" color="orangered">Enregistrer</Button> }
+           
           />
         </ItemGrid>
       </Grid>

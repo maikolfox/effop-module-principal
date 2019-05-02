@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { withStyles, FormControl, InputLabel, Input } from "material-ui";
 import { Clear, Check } from "material-ui-icons";
 import PropTypes from "prop-types";
 import cx from "classnames";
-
 import customInputStyle from "variables/styles/customInputStyle";
 
 function CustomInput({ ...props }) {
@@ -17,7 +16,14 @@ function CustomInput({ ...props }) {
     error,
     success
   } = props;
+  const [count, setCount] = useState(0);
+  //Fox Adds this function to handle inputs values
 
+  // function HandleChange() {
+  //   setCount(count + 1);
+  //   console.log(count);
+  // }
+  //Fox Adds this function to handle inputs values
   const labelClasses = cx({
     [" " + classes.labelRootError]: error,
     [" " + classes.labelRootSuccess]: success && !error
@@ -30,6 +36,7 @@ function CustomInput({ ...props }) {
   const marginTop = cx({
     [classes.marginTop]: labelText === undefined
   });
+
   return (
     <FormControl
       {...formControlProps}
@@ -53,6 +60,7 @@ function CustomInput({ ...props }) {
         }}
         id={id}
         {...inputProps}
+        /*onClick={HandleChange()}*/
       />
       {error ? (
         <Clear className={classes.feedback + " " + classes.labelRootError} />
