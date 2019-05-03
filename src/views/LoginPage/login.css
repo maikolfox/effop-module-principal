@@ -50,7 +50,7 @@
 
 .login-clean form .btn-primary:hover,
 .login-clean form .btn-primary:active {
-  background: #eb3b60;
+  background: #c44001;
 }
 
 .login-clean form .btn-primary:active {
@@ -126,3 +126,16 @@
   color: #d54500;
   margin-bottom: 100px;
 }
+
+#cancel {
+  margin-left: 42%;
+}
+/*Gris : #999999
+Gris: #535353
+Gris :  #616161
+orange bridge :#d54500;
+button :  #d54500;
+focus button :  #c44001;
+Bleu nuit :  #172935
+Bleu: #001A30
+*/

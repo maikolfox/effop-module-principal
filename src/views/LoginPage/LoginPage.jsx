@@ -1,5 +1,7 @@
 import React from "react";
 import "./login.css";
+import "jquery";
+import "bootstrap";
 
 class LoginPage extends React.Component {
   constructor(props) {
@@ -15,37 +17,47 @@ class LoginPage extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const data = new FormData(event.target);
+    const datas = new FormData(event.target);
+    let dataJson = {
+      data: {
+        email: datas.get("email"),
+        password: datas.get("password")
+      }
+    };
+    const myObjStr = JSON.stringify(dataJson);
 
+    console.log(myObjStr);
     this.setState({
-      res: stringifyFormData(data)
+      res: myObjStr //stringifyFormData(datas)
     });
     // fetch('/api/form-submit-url', {
     //   method: 'POST',
     //   body: data,
     // });
-    console.log(this.state.res);
-  }
 
+    console.log(dataJson);
+  }
   render() {
     return (
       <div className="login-clean">
         <form onSubmit={this.handleSubmit}>
-          <h2 className="sr-only">
-            Connexion à l'outils de mesuer de l'efficacité opérationnelle
-          </h2>
+          <h2 className="sr-only">EFFOP</h2>
+          <h4 className="sr-only">
+            Connexion à l'outils de mesure de l'éfficacité opérationnelle
+          </h4>
           <div className="illustration" />
+
           <div className="form-group">
             <div className="form-input">
               <label>
                 <input
                   required
                   type="text"
-                  name="input1"
+                  name="email"
                   // value={this.state.value}
                   // onChange={this.handleChange}
                 />
-                <span className="placeholder">Text Input</span>
+                <span className="placeholder">Email</span>
               </label>
             </div>
             <div className="form-input">
@@ -53,22 +65,15 @@ class LoginPage extends React.Component {
                 <input
                   required
                   type="password"
-                  name="input2"
+                  name="password"
                   // value={this.state.value}
                   // onChange={this.handleChange}
                 />
-                <span className="placeholder">Text Input</span>
+                <span className="placeholder">Password</span>
               </label>
+              <br />
+              <span>mot de pass ou email incorrect</span>
             </div>
-
-            {/* <div className="form-group">
-            <input
-              type="text"
-              name="password"
-              placeholder="Code agence"
-              className="form-control"
-            />
-          </div> */}
             {this.state.res && (
               <div className="res-block">
                 <h3>Data to be sent:</h3>
@@ -80,7 +85,18 @@ class LoginPage extends React.Component {
             <button className="btn btn-primary btn-block" type="submit">
               Enregistrer
             </button>
+
+            <button
+              id="cancel"
+              className="btn btn-primary btn-block"
+              type="reset"
+            >
+              Annuler
+            </button>
           </div>
+          <br />
+
+          <a>mot de passe oublié</a>
         </form>
       </div>
     );
