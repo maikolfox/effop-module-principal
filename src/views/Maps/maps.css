@@ -64,12 +64,6 @@
   text-decoration: none;
 }
 
-.login-clean form .forgot:hover,
-.login-clean form .forgot:active {
-  opacity: 1;
-  text-decoration: none;
-}
-*/
 /****/
 
 .form-input {
@@ -88,7 +82,7 @@
   top: 23px;
   z-index: 2;
   font-size: 16px;
-  transition: all 200ms ease-in-out;
+  transition: all 300ms ease-in-out;
   width: 100%;
   cursor: text;
   background-color: none;
@@ -102,9 +96,10 @@
   font-size: 16px;
   border: 0;
   border-bottom: 2px solid rgb(15, 15, 15);
-  transition: border-color 200ms ease-in-out;
+  transition: border-color 300ms ease-in-out;
   outline: none;
   padding: 0;
+  margin: 0;
 }
 .form-input textarea {
   min-height: 30px;
@@ -112,7 +107,6 @@
 }
 .form-input input {
   height: 30px;
-  margin-bottom: 2000px;
 }
 .form-input input:focus,
 .form-input input:valid,

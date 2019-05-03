@@ -1,0 +1,128 @@
+.login-clean {
+  /* background:#f1f7fc;*/
+  padding: 80px 0;
+}
+
+.login-clean form {
+  max-width: 520px;
+  width: 90%;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 4px;
+  color: #505e6c;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.login-clean .illustration {
+  text-align: center;
+  padding: 0 0 20px;
+  font-size: 100px;
+  color: rgb(244, 71, 107);
+}
+
+.form-control {
+  background: #f7f9fc;
+  width: 90%;
+  margin-bottom: 5px;
+  border: none;
+  border-bottom: 1px solid #dfe7f1;
+  border-radius: 0;
+  box-shadow: none;
+  outline: none;
+  color: inherit;
+  text-indent: 8px;
+  height: 42px;
+}
+
+.login-clean form .btn-primary {
+  background: #d54500;
+  border: none;
+  border-radius: 4px;
+  padding: 11px;
+  box-shadow: none;
+  margin-top: 26px;
+  text-shadow: none;
+  outline: none !important;
+  width: 150px;
+  color: #ffff;
+}
+
+.login-clean form .btn-primary:hover,
+.login-clean form .btn-primary:active {
+  background: #eb3b60;
+}
+
+.login-clean form .btn-primary:active {
+  transform: translateY(1px);
+}
+
+.login-clean form .forgot {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #6f7a85;
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+/****/
+
+.form-input {
+  margin: 40px 0;
+  width: 100%;
+}
+.form-input label {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 45px;
+}
+.form-input .placeholder {
+  position: absolute;
+  display: block;
+  top: 23px;
+  z-index: 2;
+  font-size: 16px;
+  transition: all 300ms ease-in-out;
+  width: 100%;
+  cursor: text;
+  background-color: none;
+}
+.form-input input,
+.form-input textarea {
+  position: absolute;
+  top: 15px;
+  z-index: 1;
+  width: 100%;
+  font-size: 16px;
+  border: 0;
+  border-bottom: 2px solid rgb(15, 15, 15);
+  transition: border-color 300ms ease-in-out;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+.form-input textarea {
+  min-height: 30px;
+  padding: 8px 0;
+}
+.form-input input {
+  height: 30px;
+}
+.form-input input:focus,
+.form-input input:valid,
+.form-input textarea:focus,
+.form-input textarea:valid {
+  border-bottom: 2px solid #d54500;
+}
+.form-input input:focus + .placeholder,
+.form-input input:valid + .placeholder,
+.form-input textarea:focus + .placeholder,
+.form-input textarea:valid + .placeholder {
+  top: 0;
+  cursor: inherit;
+  font-size: 14px;
+  color: #d54500;
+  margin-bottom: 100px;
+}

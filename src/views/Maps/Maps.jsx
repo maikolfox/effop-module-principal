@@ -1,10 +1,9 @@
 import React from "react";
 import "./maps.css";
-import "./maps.less";
 class PageEmpty extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { value: [] };
+    this.state = {};
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -14,8 +13,17 @@ class PageEmpty extends React.Component {
   }
 
   handleSubmit(event) {
-    alert("A name was submitted: " + this.state.value);
     event.preventDefault();
+    const data = new FormData(event.target);
+
+    this.setState({
+      res: stringifyFormData(data)
+    });
+    // fetch('/api/form-submit-url', {
+    //   method: 'POST',
+    //   body: data,
+    // });
+    console.log(this.state.res);
   }
 
   render() {
@@ -31,8 +39,9 @@ class PageEmpty extends React.Component {
                 <input
                   required
                   type="text"
-                  value={this.state.value}
-                  onChange={this.handleChange}
+                  name="input1"
+                  // value={this.state.value}
+                  // onChange={this.handleChange}
                 />
                 <span className="placeholder">Text Input</span>
               </label>
@@ -42,8 +51,9 @@ class PageEmpty extends React.Component {
                 <input
                   required
                   type="text"
-                  value={this.state.value}
-                  onChange={this.handleChange}
+                  name="input2"
+                  // value={this.state.value}
+                  // onChange={this.handleChange}
                 />
                 <span className="placeholder">Text Input</span>
               </label>
@@ -57,6 +67,12 @@ class PageEmpty extends React.Component {
               className="form-control"
             />
           </div> */}
+            {this.state.res && (
+              <div className="res-block">
+                <h3>Data to be sent:</h3>
+                <pre>{this.state.res}</pre>
+              </div>
+            )}
           </div>
           <div className="form-group">
             <button className="btn btn-primary btn-block" type="submit">
@@ -67,5 +83,12 @@ class PageEmpty extends React.Component {
       </div>
     );
   }
+}
+function stringifyFormData(fd) {
+  const data = {};
+  for (let key of fd.keys()) {
+    data[key] = fd.get(key);
+  }
+  return JSON.stringify(data, null, 2);
 }
 export default PageEmpty;

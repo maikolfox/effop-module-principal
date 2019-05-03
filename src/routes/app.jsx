@@ -1,5 +1,4 @@
 import UserProfile from "views/UserProfile/UserProfile.jsx";
-import DashboardPage from "views/Dashboard/Dashboard.jsx";
 import TableList from "views/TableList/TableList.jsx";
 import Typography from "views/Typography/Typography.jsx";
 import TauxActiviteMensuel from "views/TauxActiviteMensuel/TauxActiviteMensuel.jsx";
@@ -58,7 +57,6 @@ const appRoutes = [
     icon: LocationOn,
     component: Maps
   },
-
   {
     redirect: true,
     path: "/",
