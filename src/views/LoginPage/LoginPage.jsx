@@ -1,6 +1,13 @@
 import React from "react";
 import "./login.css";
 import auth from "../../authentification/auth.jsx";
+import TauxActiviteMensuel from "views/TauxActiviteMensuel/TauxActiviteMensuel.jsx";
+
+import { BrowserRouter } from "react-router-dom";
+
+import indexRoutes from "routes/index.jsx";
+import { createBrowserHistory } from "history";
+import { Router, Route, Switch } from "react-router-dom";
 
 class LoginPage extends React.Component {
   constructor(props) {
@@ -34,8 +41,11 @@ class LoginPage extends React.Component {
     //   method: 'POST',
     //   body: data,
     // });
+    const hist = createBrowserHistory();
 
     console.log(dataJson);
+    localStorage.setItem("isNotAdmin", "false");
+    console.log(localStorage.getItem("isNotAdmin"));
   }
   render() {
     return (

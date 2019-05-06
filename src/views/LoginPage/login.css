@@ -97,7 +97,7 @@
   width: 100%;
   font-size: 16px;
   border: 0;
-  border-bottom: 2px solid rgba(90, 89, 89, 0.363);
+  border-bottom: 1px solid rgba(90, 89, 89, 0.363);
   transition: border-color 300ms ease-in-out;
   outline: none;
   padding: 0;

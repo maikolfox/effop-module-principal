@@ -30,7 +30,7 @@ class PageEmpty extends React.Component {
     return (
       <div className="login-clean">
         <form onSubmit={this.handleSubmit}>
-          <h2 className="sr-only">Enregistrement agence</h2>
+          <h2 className="sr-only">Enregistrement marché</h2>
           <div className="illustration" />
 
           <div className="form-group">

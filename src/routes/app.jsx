@@ -15,9 +15,9 @@ import {
 } from "material-ui-icons";
 
 let appRoutes;
-
-let isAdmin = false;
-if (isAdmin) {
+let isNotAdmin_ = localStorage.getItem("isNotAdmin");
+console.log("is not admin : " + isNotAdmin_);
+if (localStorage.getItem("isNotAdmin") === "true") {
   appRoutes = [
     {
       path: "/taux-act-mens",
@@ -72,29 +72,29 @@ if (isAdmin) {
   appRoutes = [
     {
       path: "/taux-act-mens",
-      sidebarName: "Test1",
-      navbarName: "TAUX D'ACTIVITE MENSUEL",
+      sidebarName: "Enregistrement agence",
+      navbarName: "ENREGISTREMENT AGENCE",
       icon: Dashboard,
       component: TauxActiviteMensuel
     },
     {
       path: "/chrg-poids-tache-emp",
-      sidebarName: "Test2",
-      navbarName: "Typography",
+      sidebarName: "Enregistrement Tâche",
+      navbarName: "ENREGISTREMENT TACHE",
       icon: LibraryBooks,
       component: Typography
     },
     {
       path: "/chrg-poids-proc",
-      sidebarName: "Test3",
-      navbarName: "CHARGE ET POIDS PAR PROCESSUS",
+      sidebarName: "Enregistrement service",
+      navbarName: "ENREGISTREMENT SERVICE",
       icon: BubbleChart,
       component: Icons
     },
     {
       path: "/chrg-poids-tachproc",
-      sidebarName: "Charge et poids tâche par processus",
-      navbarName: "CHARGE POIDS TACHE PROCESSUS",
+      sidebarName: "Enregistrement marché",
+      navbarName: "ENREGISTREMENT MARCHE",
       icon: LocationOn,
       component: Maps
     },

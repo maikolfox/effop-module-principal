@@ -19,5 +19,6 @@ ReactDOM.render(
       <PrivateRoute> </PrivateRoute>
     </Switch>
   </Router>,
+
   document.getElementById("root")
 );
