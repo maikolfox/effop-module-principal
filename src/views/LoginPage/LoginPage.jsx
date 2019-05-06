@@ -1,7 +1,6 @@
 import React from "react";
 import "./login.css";
-import "jquery";
-import "bootstrap";
+import auth from "../../authentification/auth.jsx";
 
 class LoginPage extends React.Component {
   constructor(props) {
@@ -30,6 +29,7 @@ class LoginPage extends React.Component {
     this.setState({
       res: myObjStr //stringifyFormData(datas)
     });
+
     // fetch('/api/form-submit-url', {
     //   method: 'POST',
     //   body: data,
@@ -83,7 +83,7 @@ class LoginPage extends React.Component {
           </div>
           <div className="form-group">
             <button className="btn btn-primary btn-block" type="submit">
-              Enregistrer
+              Connexion
             </button>
 
             <button
@@ -95,8 +95,7 @@ class LoginPage extends React.Component {
             </button>
           </div>
           <br />
-
-          <a>mot de passe oublié</a>
+          <a href="#">mot de passe oublié</a>
         </form>
       </div>
     );

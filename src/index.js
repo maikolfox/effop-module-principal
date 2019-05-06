@@ -4,7 +4,7 @@ import { createBrowserHistory } from "history";
 import { Router, Route, Switch } from "react-router-dom";
 import LoginPage from "views/LoginPage/LoginPage.jsx";
 import "assets/css/material-dashboard-react.css";
-
+import PrivateRoute from "privateRoutes";
 import indexRoutes from "routes/index.jsx";
 
 const hist = createBrowserHistory();
@@ -16,6 +16,7 @@ ReactDOM.render(
       {indexRoutes.map((prop, key) => {
         return <Route path={prop.path} component={prop.component} key={key} />;
       })}
+      <PrivateRoute> </PrivateRoute>
     </Switch>
   </Router>,
   document.getElementById("root")
